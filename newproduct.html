@@ -1,0 +1,100 @@
+<html>
+
+<head>
+	<title>New Product</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div class="header">
+		<h1>DEFEDNDER SPORT STORE</h1>
+		<center>
+			<img src="../images/bta.png" width="400">
+		</center>
+	</div>
+	<div class="topnavbar">
+	</div>
+	<div class="main">
+		<center>
+			<h3>Please enter information here</h3>
+		</center>
+		<div class="container">
+			<div>
+				<form action="newproduct.php" enctype="multipart/form-data" method="post"
+					onsubmit="return confirm('Are you sure you want insert new clothes?');">
+					<div class="row">
+						<div class="col-25">
+							<label>Choose Image: </label><br>
+						</div>
+						<div class="col-85"></div>
+						<input type="file" name="image"><br><br>
+					</div>
+			</div>
+
+
+			<form name="newProductForm" action="../PHP/newproduct.php" onsubmit="return validateRegForm()"
+				method="post">
+
+				<div class="row">
+					<div class="col-25">
+						<label for="prname">Clothes Name</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="idprname" name="prname" placeholder="Insert the clothes name..">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="prprice">Clothes Price (RM)</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="idprprice" name="prprice" placeholder="Insert the clothes price">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-25">
+						<label for="prtype">Clothes Type</label>
+					</div>
+
+					<div class="col-75">
+						<select name="prtype" id="idprtype">
+							<option value="noselection">Please select the clothes type</option>
+							<option value="ROUNDNECK SHORTSLEEVE">ROUNDNECK SHORTSLEEVE</option>
+							<option value="ROUNDNECK LONGSLEEVE">ROUNDNECK LONGSLEEVE</option>
+							<option value="POLO SHORTSLEEVE">POLO SHORTSLEEVE</option>
+							<option value="POLO LONGSLEEVE">POLO LONGSLEEVE</option>
+							<option value="MUSLIMAH">MUSLIMAH</option>
+							<option value="SINGLET">SINGLET</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-25">
+						<label for="prqty">Clothes Quantity</label>
+					</div>
+					<div class="col-75">
+						<input type="number" id="idprqty" name="prqty" min="1" max="50">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label for="date">Date Created</label>
+					</div>
+					<div class="col-75">
+						<input type="date" id="datecreated" name="datecreated" min="1" max="50">
+					</div>
+
+					<div><input type="submit" value="Submit"></div>
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+</body>
+
+</html>
