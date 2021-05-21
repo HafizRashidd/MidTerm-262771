@@ -361,6 +361,9 @@ $sql = mysqli_query($link, "SELECT * FROM `tbl_products` ORDER BY `prid` ASC");
                 <center>
                   <p class="card-text">RM <?php echo number_format($row['prprice'], 2) ?></p>
                 </center>
+                <center>
+                  <p class="card-text">Quantity <?php echo number_format($row['prqty'],) ?></p>
+                </center>
                 <br>
                 <center><a href="#" class="btn btn-primary">Buy Now</a>
                   <a href="#" class="btn btn-primary">Add to Cart</a>
